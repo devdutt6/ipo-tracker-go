@@ -34,6 +34,7 @@ func main() {
 		router.Delete("", handlers.DeletePanHandler)
 	}, "panRouter")
 
+	app.Get("/companies", handlers.GetCompanies)
 	// check allotment
 	app.Get("/checkAllotments/:companyId", handlers.CheckAllotmentHandler)
 

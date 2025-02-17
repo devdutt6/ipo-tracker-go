@@ -31,6 +31,10 @@ type GetPanResponse struct {
 	Pans []PanDocument `json:"pans"`
 }
 
+type GetCompaniesResponse struct {
+	Companies []CompanyDocument `json:"companies"`
+}
+
 type ErrorResponse struct {
 	Message string `json:"message"`
 }
