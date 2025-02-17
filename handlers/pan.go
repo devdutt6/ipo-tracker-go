@@ -4,7 +4,6 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"time"
 
 	"github.com/devdutt6/ipo-tracker-go/api"
 	"github.com/devdutt6/ipo-tracker-go/mongoutil"
@@ -16,8 +15,7 @@ import (
 )
 
 func GetPanHandler(c *fiber.Ctx) error {
-	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
-	defer cancel()
+	ctx := context.TODO()
 
 	var (
 		userId = c.Locals("userId").(primitive.ObjectID)

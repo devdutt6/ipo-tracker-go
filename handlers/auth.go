@@ -4,7 +4,6 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"time"
 
 	"github.com/devdutt6/ipo-tracker-go/api"
 	"github.com/devdutt6/ipo-tracker-go/helper"
@@ -28,8 +27,7 @@ func RegisterHandler(c *fiber.Ctx) error {
 		return c.Status(400).JSON(api.NewErrorResponse("email and password are required"))
 	}
 
-	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
-	defer cancel()
+	ctx := context.TODO()
 
 	var (
 		existingUser = new(api.UserDocument)
